@@ -5,6 +5,7 @@
 
 /* components */
 @import "components/top-bars.css";
+@import "components/favorites.css";
 
 @import "reset.css";
 @import "variables.css";

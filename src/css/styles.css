@@ -6,6 +6,7 @@
 /* components */
 @import "components/top-bars.css";
 @import "components/favorites.css";
+@import "components/search-bar.css";
 
 @import "reset.css";
 @import "variables.css";
@@ -16,6 +17,7 @@ body {
 }
 
 .wrapper {
+  position: relative;
   padding: 20px;
   width: 320px;
   height: 812px;

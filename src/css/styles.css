@@ -23,3 +23,7 @@ body {
   height: 812px;
   background-color: var(--main-color);
 }
+
+.invisible {
+  display: none;
+}

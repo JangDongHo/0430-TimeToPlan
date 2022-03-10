@@ -1,15 +1,16 @@
 .search-bar-container {
-  padding: 0 21px;
+  padding: 0px;
   position: absolute;
   left: 0;
-  top: 0;
-  z-index: 1;
   width: 100%;
+  z-index: 1;
   height: 100%;
   background-color: inherit;
+  bottom: 0%;
 }
 
 .main-bar {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,6 +18,17 @@
   height: 51px;
   border-radius: 30px;
   font-size: 15px;
+}
+
+.main-bar span:first-child {
+  position: absolute;
+  left: 0;
+  margin-left: 21px;
+  cursor: pointer;
+}
+
+.main-bar span:nth-child(2) {
+  margin-right: 3px;
 }
 /* <!-- 상단 글씨 어디가세요--> */
 
@@ -27,7 +39,6 @@
 
 .search-bar__btn {
   display: flex;
-  margin-bottom: 14px;
   justify-content: space-between;
   padding: 0 21px;
   align-items: center;
@@ -39,6 +50,7 @@
   font-size: 15px;
   font-weight: bold;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  margin: 14px 20px;
 }
 /* <!--첫번째 경상남도 선택란--> */
 

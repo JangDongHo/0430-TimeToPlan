@@ -1,0 +1,43 @@
+.main-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  width: 100%;
+  height: 51px;
+  border-radius: 30px;
+  font-size: 15px;
+}
+/* <!-- 상단 글씨 어디가세요--> */
+
+.search-bar__btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-bar__btn {
+  display: flex;
+  margin-bottom: 14px;
+  justify-content: space-between;
+  padding: 0 21px;
+  align-items: center;
+  height: 51px;
+  background-color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: normal;
+  font-size: 15px;
+  font-weight: bold;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+/* <!--첫번째 경상남도 선택란--> */
+
+.search-bar__btn-right {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.bus-stop__btn {
+  color: white;
+  background-color: #515050;
+}

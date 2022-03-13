@@ -1,0 +1,65 @@
+.search-bar-container {
+  padding: 0px;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+  background-color: inherit;
+  bottom: 0%;
+}
+
+.main-bar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  height: 51px;
+  border-radius: 30px;
+  font-size: 15px;
+}
+
+.main-bar span:first-child {
+  position: absolute;
+  left: 0;
+  margin-left: 21px;
+  cursor: pointer;
+}
+
+.main-bar span:nth-child(2) {
+  margin-right: 3px;
+}
+/* <!-- 상단 글씨 어디가세요--> */
+
+.search-bar__btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-bar__btn {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 21px;
+  align-items: center;
+  height: 51px;
+  background-color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: normal;
+  font-size: 15px;
+  font-weight: bold;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  margin: 14px 20px;
+}
+/* <!--첫번째 경상남도 선택란--> */
+
+.search-bar__btn-right {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.bus-stop__btn {
+  color: white;
+  background-color: #515050;
+}

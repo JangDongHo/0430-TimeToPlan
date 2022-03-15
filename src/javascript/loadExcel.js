@@ -1,13 +1,10 @@
-function readExcel() {
-  let input = event.target;
-  let reader = new FileReader();
+const xlsx = require("xlsx");
 
-  reader.onload = function() {
-    let data = reader.result;
-    let workBook = XLSX.read(data, { type: "binary" });
+const excelFile = xlsx.readFile("bus.xlsx");
 
-    workBook.SheetNames.forEach(function(sheetName) {
-      console.log("SheetName: " + sheetName);
-    })
-  }
-}
+const sheetName = excelFile.SheetNames[0];
+const firstSheet = excelFile.Sheets[sheetName];
+
+const jsonData = xlsx.utils.sheet_to_json( firstSheet, { defval : "" } );
+
+console.log( jsonData );

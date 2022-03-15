@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="src/css/styles.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
   <title>homeGNU - 홈지앤유</title>
 </head>
 <body>
@@ -84,6 +84,7 @@
           <span class="last-bus-time">23:04</span>
         </div>
       </div>
+      <input type="file" onchange="readExcel()">
       <span class="subtitle">자주 찾는 지역</span>
       <div class="frequently-visited-container">
         <div class="frequently-visited-card">
@@ -98,9 +99,10 @@
     </main>
     <footer class="advertisement"></footer>
   </div>
-  <script src="src/javascript/search-bar.js"></script>
-  <script src="src/javascript/busAPI.js"></script>
-  <script src="src/javascript/place.js"></script>
+  <script src="../javascript/search-bar.js"></script>
+  <script src="../javascript/loadExcel.js"></script>
+  <script src="../javascript/place.js"></script>
   <script src="https://kit.fontawesome.com/b7f69e0a07.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.5/xlsx.full.min.js"></script>
 </body>
 </html>

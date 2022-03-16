@@ -7,4 +7,4 @@ const firstSheet = excelFile.Sheets[sheetName];
 
 const jsonData = xlsx.utils.sheet_to_json( firstSheet, { defval : "" } );
 
-console.log( jsonData );
+console.log( jsonData[0].도착 );

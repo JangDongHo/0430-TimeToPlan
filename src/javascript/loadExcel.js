@@ -1,6 +1,6 @@
-const xlsx = require("xlsx");
+import { readFile, utils } from "xlsx";
 
-const excelFile = xlsx.readFile("bus.xlsx");
+const excelFile = readFile("bus.xlsx");
 
 const sheetName = excelFile.SheetNames[0];
 const firstSheet = excelFile.Sheets[sheetName];

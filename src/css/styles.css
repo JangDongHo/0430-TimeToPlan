@@ -11,6 +11,8 @@
 @import "reset.css";
 @import "variables.css";
 
+@import "components/timetable.css";
+
 body {
   margin: 20px auto;
   background-color: var(--body-color);

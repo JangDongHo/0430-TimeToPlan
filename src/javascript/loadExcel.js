@@ -1,10 +1,17 @@
-const xlsx = require("xlsx");
+var xhr = new XMLHttpRequest();
+var url =
+  "https://api.odsay.com/v1/api/intercityServiceTime?startStationID=3601540&endStationID=4000255"; /*URL*/
+var queryParams =
+  "&" +
+  encodeURIComponent("apiKey") +
+  "=" +
+  "Jbsq50JZZESwIwDBrPu1sA"; /*Service Key*/
+xhr.open("GET", url + queryParams);
+console.log(url + queryParams);
+xhr.onreadystatechange = function () {
+  if (this.readyState == 4) {
+    console.log(this.responseText);
+  }
+};
 
-const excelFile = xlsx.readFile("bus.xlsx");
-
-const sheetName = excelFile.SheetNames[0];
-const firstSheet = excelFile.Sheets[sheetName];
-
-const jsonData = xlsx.utils.sheet_to_json(firstSheet, { defval: "" });
-
-console.log(jsonData);
+xhr.send("");

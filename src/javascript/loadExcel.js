@@ -12,9 +12,16 @@ function openSearchBar() {
   xhr.open("GET", url + queryParams);
   xhr.onreadystatechange = function () {
     if (this.readyState == 4) {
-      busData = JSON.parse(this.responseText);
-      console.log(busData.result.station[0]);
+      const busData = JSON.parse(this.responseText);
+      const busScheduleData = busData.result.station[0].schedule.split("\n");
+      let busSchedule = [];
+      busScheduleData.forEach((times) => {
+        times.split("/").forEach((time) => {
+          busSchedule.push(time);
+        });
+      });
     }
+    console.log(busSchedule);
   };
 
   xhr.send("");

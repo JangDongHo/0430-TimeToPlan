@@ -13,7 +13,7 @@ function openSearchBar() {
   xhr.onreadystatechange = function () {
     if (this.readyState == 4) {
       busData = this.responseText;
-      console.log(busData.result);
+      console.log(busData.object);
     }
   };
 

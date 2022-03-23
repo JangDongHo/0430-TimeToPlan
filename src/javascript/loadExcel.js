@@ -13,7 +13,7 @@ function openSearchBar() {
   xhr.onreadystatechange = function () {
     if (this.readyState == 4) {
       busData = JSON.parse(this.responseText);
-      console.log(busData);
+      console.log(busData.result.station[0]);
     }
   };
 

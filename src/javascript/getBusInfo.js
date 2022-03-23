@@ -1,4 +1,4 @@
-const searchBarBtns = document.querySelector(".bus-btn");
+const busBtn = document.querySelector(".bus-btn");
 const busInfoTable = document.querySelector(".bus-info__table");
 
 function paintBusData(busDatas) {
@@ -37,4 +37,4 @@ function getBusData() {
   xhr.send("");
 }
 
-searchBtn.addEventListener("click", getBusData);
+busBtn.addEventListener("click", getBusData);

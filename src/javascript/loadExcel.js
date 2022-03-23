@@ -12,8 +12,8 @@ function openSearchBar() {
   xhr.open("GET", url + queryParams);
   xhr.onreadystatechange = function () {
     if (this.readyState == 4) {
-      busData = this.responseText;
-      console.log(busData.object);
+      busData = JSON.parse(this.responseText);
+      console.log(busData);
     }
   };
 

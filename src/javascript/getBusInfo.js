@@ -1,7 +1,14 @@
 const searchBarBtns = document.querySelector(".search-bar__btns");
+const busInfoTable = document.querySelector(".bus-info__table");
 
-function paintBusData(busData) {
-  console.log(busData);
+function paintBusData(busDatas) {
+  busDatas.forEach((busData) => {
+    const tr = document.createElement("tr");
+    const td = document.createElement("td");
+    td.innerText = busData;
+    tr.appendChild(td);
+    busInfoTable.appendChild(tr);
+  });
 }
 
 function getBusData() {

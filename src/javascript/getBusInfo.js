@@ -1,4 +1,4 @@
-const searchBarBtns = document.querySelector(".search-bar__btns");
+const searchBarBtns = document.querySelector(".bus-btn");
 const busInfoTable = document.querySelector(".bus-info__table");
 
 function paintBusData(busDatas) {

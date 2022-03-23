@@ -1,6 +1,10 @@
 const searchBarBtns = document.querySelector(".search-bar__btns");
 
-function openSearchBar() {
+function paintBusData(busData) {
+  console.log(busData);
+}
+
+function getBusData() {
   var xhr = new XMLHttpRequest();
   var url =
     "https://api.odsay.com/v1/api/intercityServiceTime?startStationID=3601540&endStationID=4000255"; /*URL*/
@@ -20,11 +24,10 @@ function openSearchBar() {
           busSchedule.push(time);
         });
       });
+      paintBusData(busSchedule);
     }
-    console.log(busSchedule);
   };
-
   xhr.send("");
 }
 
-searchBtn.addEventListener("click", openSearchBar);
+searchBtn.addEventListener("click", getBusData);

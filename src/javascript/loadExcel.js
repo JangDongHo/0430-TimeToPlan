@@ -10,7 +10,8 @@ xhr.open("GET", url + queryParams);
 console.log(url + queryParams);
 xhr.onreadystatechange = function () {
   if (this.readyState == 4) {
-    console.log(this.responseText);
+    busData = this.responseText;
+    console.log(busData.result);
   }
 };
 

@@ -46,14 +46,15 @@ function getBusData(stationID) {
   xhr.onreadystatechange = function () {
     if (this.readyState == 4) {
       const busData = JSON.parse(this.responseText);
-      const busScheduleData = busData.result.station[0].schedule.split("\n");
-      let busSchedule = [];
-      busScheduleData.forEach((times) => {
-        times.split("/").forEach((time) => {
-          busSchedule.push(time);
-          console.log(time);
-        });
-      });
+      console.log(busData);
+      //const busScheduleData = busData.result.station[0].schedule.split("\n");
+      //let busSchedule = [];
+      //busScheduleData.forEach((times) => {
+      //  times.split("/").forEach((time) => {
+      //    busSchedule.push(time);
+      //    console.log(time);
+      //  });
+      //});
       //paintBusData(busSchedule);
     }
   };

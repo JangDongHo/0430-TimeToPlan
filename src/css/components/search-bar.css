@@ -43,7 +43,7 @@
   padding: 0 21px;
   align-items: center;
   height: 51px;
-  background-color: white;
+  background-color: lightskyblue;
   border-radius: 30px;
   cursor: pointer;
   font-weight: normal;
@@ -55,11 +55,12 @@
 /* <!--첫번째 경상남도 선택란--> */
 
 .search-bar__btn-right {
-  font-size: 12px;
+  font-size: 20px;
   font-weight: normal;
+  color: palevioletred;
 }
 
 .bus-stop__btn {
-  color: white;
-  background-color: #515050;
+  color: black;
+  background-color: white;
 }

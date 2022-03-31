@@ -1,6 +1,26 @@
 const busBtn = document.querySelector(".bus-btn");
 const busInfoTable = document.querySelector(".bus-info__table");
 
+const getStationID = (terminalName) => {
+  const xhr = new XMLHttpRequest();
+  const baseUrl = "https://api.odsay.com/v1/api/intercityBusTerminals";
+  const config = {
+    lang: 0,
+    terminalName,
+  };
+  const params = new URLSearchParams(config).toString();
+  const apiKey = "Jbsq50JZZESwIwDBrPu1sA";
+  const finalUrl = `${baseUrl}?${params}&apiKey=${apiKey}`;
+  xhr.open("GET", finalUrl);
+  xhr.onreadystatechange = function () {
+    if (this.readyState == 4) {
+      console.log(this);
+    }
+  };
+  xhr.send("");
+  console.log(finalUrl);
+};
+
 function paintBusData(busDatas) {
   busDatas.forEach((busData) => {
     const tr = document.createElement("tr");
@@ -37,4 +57,6 @@ function getBusData() {
   xhr.send("");
 }
 
-busBtn.addEventListener("click", getBusData);
+//busBtn.addEventListener("click", getBusData);
+
+export default getStationID;

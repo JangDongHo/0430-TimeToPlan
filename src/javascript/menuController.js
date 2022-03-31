@@ -18,7 +18,8 @@ function closeSearchBar() {
 /* busStationBtn 컨트롤러 */
 function renderBusInfo() {
   const terminalName = busStopBtn.firstChild.innerHTML;
-  console.log(getStationID(terminalName));
+  const test = getStationID(terminalName);
+  console.log(test);
 }
 
 searchBtn.addEventListener("click", openSearchBar);

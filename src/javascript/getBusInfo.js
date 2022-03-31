@@ -16,7 +16,7 @@ const getStationID = (terminalName) => {
     if (this.readyState == 4) {
       const busData = JSON.parse(this.responseText);
       const stationID = busData.result[0].stationID;
-      return stationID;
+      getBusData(stationID);
     }
   };
   xhr.send("");
@@ -32,15 +32,16 @@ function paintBusData(busDatas) {
   });
 }
 
-function getBusData() {
-  var xhr = new XMLHttpRequest();
-  var url =
-    "https://api.odsay.com/v1/api/intercityServiceTime?startStationID=3601540&endStationID=4000255"; /*URL*/
-  var queryParams =
-    "&" +
-    encodeURIComponent("apiKey") +
-    "=" +
-    "Jbsq50JZZESwIwDBrPu1sA"; /*Service Key*/
+function getBusData(stationID) {
+  const xhr = new XMLHttpRequest();
+  const baseUrl = "https://api.odsay.com/v1/api/intercityServiceTime";
+  const config = {
+    startStationID: 3601540,
+    endStationID: stationID,
+  };
+  const params = new URLSearchParams(config).toString();
+  const apiKey = "Jbsq50JZZESwIwDBrPu1sA";
+  const finalUrl = `${baseUrl}?${params}&apiKey=${apiKey}`;
   xhr.open("GET", url + queryParams);
   xhr.onreadystatechange = function () {
     if (this.readyState == 4) {
@@ -50,9 +51,10 @@ function getBusData() {
       busScheduleData.forEach((times) => {
         times.split("/").forEach((time) => {
           busSchedule.push(time);
+          console.log(time);
         });
       });
-      paintBusData(busSchedule);
+      //paintBusData(busSchedule);
     }
   };
   xhr.send("");

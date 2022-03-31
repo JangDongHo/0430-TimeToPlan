@@ -14,6 +14,7 @@ const getStationID = (terminalName) => {
   xhr.open("GET", finalUrl);
   xhr.onreadystatechange = function () {
     if (this.readyState == 4) {
+      const busData = JSON.parse(this.responseText);
       const stationID = busData.result[0].stationID;
       return stationID;
     }

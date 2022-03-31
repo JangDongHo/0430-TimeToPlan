@@ -14,11 +14,11 @@ const getStationID = (terminalName) => {
   xhr.open("GET", finalUrl);
   xhr.onreadystatechange = function () {
     if (this.readyState == 4) {
-      console.log(this);
+      const stationID = busData.result[0].stationID;
+      return stationID;
     }
   };
   xhr.send("");
-  console.log(finalUrl);
 };
 
 function paintBusData(busDatas) {

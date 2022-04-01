@@ -58,6 +58,4 @@ function getBusData(stationID) {
   xhr.send("");
 }
 
-getStationID(terminalName);
-
 export default getStationID;

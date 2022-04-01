@@ -17,12 +17,13 @@ function closeSearchBar() {
 
 /* busStationBtn 컨트롤러 */
 function renderBusInfo() {
+  location.href = "https://homegnu.kro.kr/bus-info";
   const terminalName = busStopBtn.firstChild.innerHTML;
-  const test = getStationID(terminalName);
-  console.log(test);
 }
 
 searchBtn.addEventListener("click", openSearchBar);
 closeBtn.addEventListener("click", closeSearchBar);
 
 busStopBtn.addEventListener("click", renderBusInfo);
+
+export default terminalName;

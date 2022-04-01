@@ -1,4 +1,5 @@
-const busBtn = document.querySelector(".bus-btn");
+import terminalName from "./menuController";
+
 const busInfoTable = document.querySelector(".bus-info__table");
 
 const getStationID = (terminalName) => {
@@ -51,15 +52,14 @@ function getBusData(stationID) {
       busScheduleData.forEach((times) => {
         times.split("/").forEach((time) => {
           busSchedule.push(time);
-          console.log(time);
         });
       });
-      //paintBusData(busSchedule);
+      paintBusData(busSchedule);
     }
   };
   xhr.send("");
 }
 
-//busBtn.addEventListener("click", getBusData);
+getStationID(terminalName);
 
 export default getStationID;

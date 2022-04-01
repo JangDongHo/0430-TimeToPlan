@@ -1,3 +1,5 @@
+import { terminalName } from "./menuController.js";
+
 const busInfoTable = document.querySelector(".bus-info__table");
 
 const getStationID = (terminalName) => {
@@ -57,5 +59,7 @@ function getBusData(stationID) {
   };
   xhr.send("");
 }
+
+getStationID(terminalName);
 
 export default getStationID;

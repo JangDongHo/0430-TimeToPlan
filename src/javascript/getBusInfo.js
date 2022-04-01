@@ -1,5 +1,3 @@
-import terminalName from "./menuController";
-
 const busInfoTable = document.querySelector(".bus-info__table");
 
 const getStationID = (terminalName) => {

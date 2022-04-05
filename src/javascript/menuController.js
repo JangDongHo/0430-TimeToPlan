@@ -1,5 +1,3 @@
-//import getStationID from "./getBusInfo.js";
-
 const searchBtn = document.querySelector(".search-bar");
 const searchBarContainer = document.querySelector(".search-bar-container");
 const closeBtn = document.querySelector(".search-bar__close-btn");
@@ -28,5 +26,3 @@ searchBtn.addEventListener("click", openSearchBar);
 closeBtn.addEventListener("click", closeSearchBar);
 
 busStopBtn.addEventListener("click", renderBusInfo);
-
-export default terminalName;

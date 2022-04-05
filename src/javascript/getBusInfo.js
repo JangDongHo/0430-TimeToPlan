@@ -1,5 +1,3 @@
-import terminalName from "./menuController.js";
-
 const busInfoTable = document.querySelector(".bus-info__table");
 
 const getStationID = (terminalName) => {
@@ -66,5 +64,3 @@ if (localStorage.getItem("terminalName")) {
 } else {
   alert("ERROR");
 }
-
-//export default getStationID;

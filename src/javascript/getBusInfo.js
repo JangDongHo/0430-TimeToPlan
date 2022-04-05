@@ -60,6 +60,11 @@ function getBusData(stationID) {
   xhr.send("");
 }
 
-getStationID(terminalName);
+if (localStorage.getItem("terminalName")) {
+  const terminalName = localStorage.getItem("terminalName");
+  getStationID(terminalName);
+} else {
+  alert("ERROR");
+}
 
 //export default getStationID;

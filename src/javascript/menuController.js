@@ -14,11 +14,15 @@ function closeSearchBar() {
   searchBarContainer.classList.add("invisible");
 }
 
+function redirectBusinfo() {
+  location.href = "https://homegnu.kro.kr/bus-info";
+}
+
 /* busStationBtn 컨트롤러 */
 function renderBusInfo(event) {
   terminalName = event.target.innerText;
   localStorage.setItem("terminalName", terminalName);
-  location.href = "https://homegnu.kro.kr/bus-info";
+  setTimeout(redirectBusinfo, 1000);
 }
 
 searchBtn.addEventListener("click", openSearchBar);

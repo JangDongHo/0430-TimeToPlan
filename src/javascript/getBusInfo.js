@@ -59,9 +59,7 @@ function getBusData(stationID) {
 }
 
 if (localStorage.getItem("terminalName")) {
-  let terminalName = setTimeout(() => {
-    localStorage.getItem("terminalName");
-  }, 1000);
+  let terminalName = localStorage.getItem("terminalName");
   getStationID(terminalName);
 } else {
   alert("ERROR");

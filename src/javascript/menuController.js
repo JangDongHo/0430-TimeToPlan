@@ -1,8 +1,7 @@
-const searchBtn = document.getElementsByClassName("search-bar");
+const searchBtn = document.querySelector(".search-bar");
 const searchBarContainer = document.querySelector(".search-bar-container");
 const closeBtn = document.querySelector(".search-bar__close-btn");
-
-const busStopBtn = document.querySelector(".bus-stop__btn");
+const searchBarBtns = document.querySelector(".search-bar__btns");
 
 let terminalName = "";
 
@@ -16,8 +15,8 @@ function closeSearchBar() {
 }
 
 /* busStationBtn 컨트롤러 */
-function renderBusInfo() {
-  terminalName = busStopBtn.firstChild.innerHTML;
+function renderBusInfo(event) {
+  terminalName = event.target.innerText;
   localStorage.setItem("terminalName", terminalName);
   location.href = "https://homegnu.kro.kr/bus-info";
 }
@@ -25,4 +24,4 @@ function renderBusInfo() {
 searchBtn.addEventListener("click", openSearchBar);
 closeBtn.addEventListener("click", closeSearchBar);
 
-busStopBtn.addEventListener("click", renderBusInfo);
+searchBarBtns.addEventListener("click", renderBusInfo);

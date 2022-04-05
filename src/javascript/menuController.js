@@ -1,4 +1,4 @@
-const searchBtn = document.getElementsByClassName(".search-bar");
+const searchBtn = document.getElementsByClassName("search-bar");
 const searchBarContainer = document.querySelector(".search-bar-container");
 const closeBtn = document.querySelector(".search-bar__close-btn");
 

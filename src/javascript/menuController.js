@@ -18,7 +18,7 @@ function closeSearchBar() {
 /* busStationBtn 컨트롤러 */
 function renderBusInfo() {
   location.href = "https://homegnu.kro.kr/bus-info";
-  export const terminalName = busStopBtn.firstChild.innerHTML;
+  const terminalName = busStopBtn.firstChild.innerHTML;
 }
 
 searchBtn.addEventListener("click", openSearchBar);
